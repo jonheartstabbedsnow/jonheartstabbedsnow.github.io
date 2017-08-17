@@ -1,21 +1,25 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html>
 
-    {% include title-group.html %}
+  {% include head.html %}
 
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+  <body>
 
-                    {% for post in paginator.posts %}
-                      {% include tile.html %}
-                    {% endfor %}
+    {% include header.html %}
 
-                    {% include pagination.html %}
+    <!-- content start -->
 
-                </div>
-            </div>
-        </div>
-    </main>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
-{% include footer.html %}
+    <!-- content end -->
+
+    {% include footer.html %}
+    {% include javascripts.html %}
+
+  </body>
+
+</html>

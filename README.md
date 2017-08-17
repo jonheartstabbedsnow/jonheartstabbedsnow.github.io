@@ -1,93 +1,78 @@
-### Phantom for Jekyll
+mediator
+========
 
-A minimalist, responsive portfolio theme for [Jekyll](http://jekyllrb.com/) with Bootstrap.
+A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme
+[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](http://blog.base68.com).
 
-![preview](preview.jpg)
+Screenshots
+--------
+![screenshot](/assets/images/screenshot1.jpg)
+![screenshot](/assets/images/screenshot2.jpg)
+![screenshot](/assets/images/screenshot3.jpg)
 
-[See it in action](http://jamigibbs.github.io/phantom/).
+Features
+-------
+* Fully Responsive layout
+* Use header images in articles, if you want to (add tag "image" and url to the image in the front matter section of a post)
+* Minimal design
+* Featured article support
+* FontAwesome implemented for easy use of icons fonts
+* Free & Open Source Font usage
 
-### Fancy using it for your own site?
+Getting Started
+---
+- [Fork this repository](https://github.com/dirkfabisch/mediator)
+- Clone it: `git clone https://github.com/YOUR-USER/mediator`
+- Install the requried gems ([GitHub Pages](https://github.com/github/pages-gem), [Bourbon](https://github.com/thoughtbot/bourbon) and [Jekyll](https://github.com/jekyll/jekyll), [Jemoji](https://github.com/jekyll/jemoji)): `bundle install`
+- Run the jekyll server: `bundle exec jekyll serve`
 
-Here are some steps to get you started:
+You should have a server up and running locally at <http://localhost:4000>.
 
-1. Clone this repo and cd into the directory:
+Configuration
+-----
 
-  `git clone https://github.com/jamigibbs/phantom.git your-dir-name`
-  `cd your-dir-name`
+The main settings happen in side of the _config.yml file:
 
-2. Run Jekyll:
+### Site
 
-  `jekyll serve --watch`
+Main settings for the site
 
-  _Don't have Jekyll yet? [Get `er installed then!](http://jekyllrb.com/docs/installation/)_
+* **title**: name of your site
+* **description**: description of your site
+* **logo**: small logo for the site (300x * 300x)
+* **cover**: large background image on the index page
 
-3. Visit in your browser at:
+* **name**: name site owner
+* **email**: mail address of the site owner
+* **author**: author name
+* **author_image**: small image of author (300x * 300px)
+* **disqus**: add a disqus forum for your post
 
-  `http://127.0.0.1:4000`
+### Social
 
-### Launching with Github Pages :rocket:
+The template allows to add all major social platforms to your site.
+Fill the the form for each platform. If you leave the share_* entries empty, the sharing buttons below a post are not shown.  If you leave the **url** and **desc** empty the icons are not shown on the index page, but the share icons on the article pages remains untouched (Thanks to [Phil](https://github.com/philsturgeon))
 
-Jekyll + Github pages is a marriage made in heaven. You can [use your own custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) or use the default Github url (ie. http://username.github.io/repository) and not bother messing around with DNS settings.
+* **icon**:	name of social platform (must match a name of [font-awsome](http://fortawesome.github.io/Font-Awesome/) icon set )
+* **url**:	url of your account
+* **desc**: slogan of the platform
+* **share_url**: share url
+* **share_title**: first part of url for the title
+* **share_link**: second part of the share url for the link to the post
 
-### Theme Features
-
-**Navigation**
-
-To activate a navigation bar in the header, set the global `nav` variable to true in:
-
-`/_data/global.yml`
-
-Then add your navigation items in the `/_data/nav.yml` file. For example:
-
-```
-main:
-    - { url: '/', text: 'Home' }
-    - { url: '/about', text: 'About' }
-```
-
-**Contact Form**
-
-You can display a contact form within the modal window template. This template is already setup to use the [Formspree](https://formspree.io) email system. You'll just want to add your email address to the form in `/_includes/contact-modal.html`.
-
-Place the modal window template in any place you'd like the user to click for the contact form.
-The template will display a link to click for the contact form modal window:
-
-```
-{% include contact.html %}
-{% include contact-modal.html %}
-```
-
-**Animation Effects**
-
-Animations with CSS classes are baked into the theme. To animate a section or element, simply add the animation classes:
-
-```
-<div id="about-me" class="wow fadeIn">
-  I'm the coolest!
-</div>
-```
-
-For a complete list of animations, see the [animation list](http://daneden.github.io/animate.css/).
-
-**Pagination**
-
-By default, pagination on the home page will activate after 10 posts. You can change this within `_config.yml`. You can add the pagination to other layouts with:
+The Liquid template engine will magical combine the different parts to a share url.
 
 ```
-  {% for post in paginator.posts %}
-    {% include post-content.html %}
-  {% endfor %}
+http://twitter.com/share?text=post_title&amp;url=post_url
+````
 
-  {% include pagination.html %}
-```
+See [_config.yml](https://github.com/dirkfabisch/mediator/blob/master/_config.yml) for more examples.
 
-Read more about the [pagination plugin](http://jekyllrb.com/docs/pagination/).
+Licensing
+---------
 
-### Credit
+[MIT](https://github.com/dirkfabisch/mediator/blob/master/LICENCE) with no added caveats, so feel free to use this on your site without linking back to me or using a disclaimer or anything silly like that.
 
-* Bootstrap, http://getbootstrap.com/, (C) 2011 - 2016 Twitter, Inc., [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
-
-* Wow, https://github.com/matthieua/WOW, (C) 2014 - 2016 Matthieu Aussaguel
-, [GPL](https://github.com/matthieua/WOW#open-source-license)
-
-* Animate.css, https://github.com/daneden/animate.css, (C) 2016 Daniel Eden, [MIT](https://github.com/daneden/animate.css/blob/master/LICENSE)
+Contact
+-------
+I'd love to hear from you at [@dirkfabisch](https://twitter.com/dirkfabisch). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome.

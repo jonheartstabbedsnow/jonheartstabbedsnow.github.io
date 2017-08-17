@@ -1,74 +1,63 @@
-# Where things are
-source:      .
-destination: ./_site
-plugins_dir:     ./_plugins
-layouts_dir:     ./_layouts
-data_dir: ./_data
-includes_dir: ./_includes
-# collections: null
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
 
-# Handling Reading
-safe:         false
-include:      [".htaccess"]
-exclude:      []
-keep_files:   [".git", ".svn"]
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# Site settings
+title: "Mediator"
+description: > # this means to ignore newlines until "email:"
+   A Jekyll theme - Medium inspired
 
-# Filtering Content
-show_drafts: null
-limit_posts: 0
-future:      true
-unpublished: false
+email: a-mail@mail.mail
+#blog logo
+logo: "/assets/images/df_logo.jpg"
+float_logo: true # true, false (default)
 
-# Plugins
-whitelist: []
-gems:      [jekyll-paginate]
+# blog cover
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
 
-# Conversion
-markdown:    kramdown
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-# incremental: false
+name: 'Dirk Fabisch'
+author: 'Dirk Fabisch'
+author_image: "/assets/images/author.jpg"
 
-# Serving
-detach:  false
-port:    4000
-host:    127.0.0.1
-baseurl: "http://jamigibbs.github.io/phantom/" # does not include hostname
+paginate:	5
 
-# Outputting
-permalink:     date
-paginate:       10
-paginate_path: /page:num
-timezone:      null
+url: "http://myblog.***.***" # the base hostname & protocol for your site
+baseurl: ""
+#used to display twitter cards
+twitter_handle: '@dirkfabisch'
 
-quiet:    false
-defaults: []
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
 
-# Markdown Processors
-rdiscount:
-  extensions: []
+#google_analytics: UA-XXXXX-X
 
-redcarpet:
-  extensions: []
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/dirkfabisch
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
 
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: https://www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
 
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+  - icon:	github
+    url:	https://github.com/dirkfabisch
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
 
-
-include: ['_pages']
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
